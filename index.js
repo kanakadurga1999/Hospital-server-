@@ -10,13 +10,13 @@ const port = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 
-// READ (GET) - Retrieve all hospitals
+// READ (GET) 
 app.get('/hospitals', (req, res) => {
   const data = readData();
   res.json(data.hospitals);
 });
 
-// READ (GET) - Retrieve a specific hospital by name
+// READ (GET) -  hospital by name
 app.get('/hospitals/:name', (req, res) => {
   const data = readData();
   const hospital = data.hospitals.find((h) => h.name === req.params.name);
@@ -27,7 +27,7 @@ app.get('/hospitals/:name', (req, res) => {
   }
 });
 
-// CREATE (POST) - Add a new hospital to the dataset
+// CREATE (POST) - Add a new hospital 
 app.post('/hospitals', (req, res) => {
   const data = readData();
   const newHospital = req.body;
@@ -36,7 +36,7 @@ app.post('/hospitals', (req, res) => {
   res.json(newHospital);
 });
 
-// UPDATE (PUT) - Update hospital information
+// UPDATE (PUT) - Update
 app.put('/hospitals/:name', (req, res) => {
   const data = readData();
   const hospital = data.hospitals.find((h) => h.name === req.params.name);
@@ -63,7 +63,7 @@ app.delete('/hospitals/:name', (req, res) => {
   }
 });
 
-// Helper functions
+
 const readData = () => {
   try {
     const data = JSON.parse(fs.readFileSync('hospitals.json', 'utf8'));
