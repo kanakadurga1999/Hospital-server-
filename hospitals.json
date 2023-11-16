@@ -1,0 +1,26 @@
+{
+    "hospitals": [
+      {
+        "name": "Thrissur medical college hospital",
+        "patientCount": 150,
+        "location": "Thrissur"
+      },
+      {
+        "name": "kozhikode medical college hospital",
+        "patientCount": 75,
+        "location": "kozhikode"
+      },
+      {
+        "name": "Kottayam medical college hospital",
+        "patientCount": 200,
+        "location": "Kottayam"
+      },
+      {
+        "name": "Palakkad medical college hospital",
+        "patientCount": 200,
+        "location": "Palakkad"
+      }
+
+    ]
+  }
+  
